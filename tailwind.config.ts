@@ -57,6 +57,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        cyber: {
+          cyan: "hsl(var(--cyber-cyan))",
+          purple: "hsl(var(--cyber-purple))",
+          green: "hsl(var(--neon-green))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +85,25 @@ export default {
             height: "0",
           },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        glow: {
+          "0%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.3)" },
+          "100%": { boxShadow: "0 0 40px hsl(var(--primary) / 0.6), 0 0 60px hsl(var(--secondary) / 0.4)" },
+        },
+        "spin-slow": {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        float: "float 6s ease-in-out infinite",
+        glow: "glow 2s ease-in-out infinite alternate",
+        "spin-slow": "spin-slow 20s linear infinite",
       },
     },
   },
